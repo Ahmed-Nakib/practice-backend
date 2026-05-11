@@ -1,7 +1,21 @@
-import { Router } from "express";
-import app from "../app";
-import todoRouter from "../modules/todo/todo.route";
+import {Router} from "express";
+import { categoryRouter } from "../modules/category/category.route";
 
-export const router = Router();
 
-router.use("/todo", todoRouter)
+const router = Router();
+
+const routeList = [
+    {
+        prefix: "/category",
+        route: categoryRouter,
+    }
+]
+
+routeList.forEach((route) => {
+    router.use(route.prefix, route.route)
+})
+
+
+export default router;
+
+

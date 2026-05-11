@@ -138,3 +138,8 @@ practice-backend/
 
 ✨ **এই README দেখে ভবিষ্যতে তুমি সহজেই সব কিছু মনে করতে পারবে।**
 Happy Coding 🚀
+
+
+
+npm install mongoose
+npm install -D concurrently
